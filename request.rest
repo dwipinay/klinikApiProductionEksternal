@@ -1,0 +1,15 @@
+### Token Create
+POST http://127.0.0.1:4002/api/login
+Content-Type: application/json
+
+{
+    "userName": "kotakelektronik@gmail.com",
+    "password": "p5fuNGds"
+}
+
+### Klinik
+GET http://127.0.0.1:4002/api/klinik?provinsiId=12&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNDg4NSwiZXhwIjoxNjYzMjA1NDg1fQ.UUFvOS4YLHatHXuv6MKq-qhl5VZTVBok5rM-O1Oj2TM
+### Klinik Specific
+GET http://127.0.0.1:4002/api/klinik/1211178
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNTI0NiwiZXhwIjoxNjYzMjA1ODQ2fQ.an5d7bCRF8DWWWOBilLQNyudYED27GALNucO5_S8Nn8

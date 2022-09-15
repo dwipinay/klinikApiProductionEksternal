@@ -1,0 +1,103 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Internal RS Online API",
+        "description": "",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:4000",
+            "description": "staging server"
+        }
+    ],
+    "tags": [
+        {
+            "name": "ketersediaanalkes",
+            "description": ""
+        }
+    ],
+    "paths": {
+        "/api/ketersediaanalkes": {
+            "post":{
+                "tags":[
+                    "ketersediaanalkes"
+                ],
+                "summary": "",
+                "description":"",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "requestBody":{
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "example": {
+                                    "kode_rs": "3174063"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201": {
+                        "description": "created"
+                    },
+                    "401": {
+                        "description": "unauthorized"
+                    }
+                }
+            },
+            "get":{
+                "tags":[
+                    "ketersediaanalkes"
+                ],
+                "summary": "",
+                "description":"",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters":[
+                    {
+                        "in": "query",
+                        "name": "kode_rs",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "3174063"
+                        },
+                        "description": ""
+                    }
+                ],
+                "responses":{
+                    "200": {
+                        "description": "data found"
+                    },
+                    "401": {
+                        "description": "unauthorized"
+                    },
+                    "403": {
+                        "description": "forbidden"
+                    }
+                }
+            }
+        }
+    },
+    "components": {        
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}
