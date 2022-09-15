@@ -12,14 +12,17 @@ const klinikControllerObject = new klinikController()
 
 // Auth
 router.post('/api/login',
+    userControllerObject.authenticateIP,    
     userControllerObject.authenticateCredential)
 
 // Praktek Mandiri
 router.get('/api/klinik',
+    userControllerObject.authenticateIP,
     tokenObject.authenticateToken,
     klinikControllerObject.index)
 
 router.get('/api/klinik/:id',
+    userControllerObject.authenticateIP,
     tokenObject.authenticateToken,
     klinikControllerObject.show)
 

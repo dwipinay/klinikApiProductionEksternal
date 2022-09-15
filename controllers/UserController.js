@@ -9,6 +9,28 @@ const Joi = require('joi')
 const generatePassword = require('password-generator')
 
 class userCredentialController {
+    authenticateIP(req, res, next) {
+        const requestIP = req.socket.remoteAddress.toString().replace('::ffff:', '')
+        const userIPObject = new user()
+        userIPObject.authenticateIP(requestIP, (err, result) => {
+            if (err) {
+                res.status(422).send({
+                    status: false,
+                    message: err
+                })
+                return
+            }
+            if(result.length) { 
+                next()
+            } else {
+                res.status(403).send({
+                    status: false,
+                    message: `${requestIP} not registered`
+                })
+            }
+        })
+    }
+    
     authenticateCredential(req, res) {
         const data = {
             userName: req.body.userName,
