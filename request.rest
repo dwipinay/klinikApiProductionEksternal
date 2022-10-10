@@ -1,5 +1,5 @@
 ### Token Create
-POST http://127.0.0.1:4002/api/login
+POST http://127.0.0.1:4001/api/login
 Content-Type: application/json
 
 {
@@ -8,8 +8,25 @@ Content-Type: application/json
 }
 
 ### Klinik
-GET http://127.0.0.1:4002/api/klinik?provinsiId=12&kabKotaId=&page=1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNDg4NSwiZXhwIjoxNjYzMjA1NDg1fQ.UUFvOS4YLHatHXuv6MKq-qhl5VZTVBok5rM-O1Oj2TM
+GET http://127.0.0.1:4001/api/klinik?provinsiId=12&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4MzY3NiwiZXhwIjoxNjY1Mzg0Mjc2fQ.0mKrjwIqfjgiL550kLttS3r13BWmQyXnbUtEBxXHLdA
+
 ### Klinik Specific
-GET http://127.0.0.1:4002/api/klinik/1211178
+GET http://127.0.0.1:4001/api/klinik/1211178
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNTI0NiwiZXhwIjoxNjYzMjA1ODQ2fQ.an5d7bCRF8DWWWOBilLQNyudYED27GALNucO5_S8Nn8
+
+### Praktek Mandiri
+http://127.0.0.1:4001/api/praktekmandiri?provinsiId=12&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4MzY3NiwiZXhwIjoxNjY1Mzg0Mjc2fQ.0mKrjwIqfjgiL550kLttS3r13BWmQyXnbUtEBxXHLdA
+
+### Praktek Mandiri Specific
+http://127.0.0.1:4001/api/praktekmandiri/12020100001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4MzY3NiwiZXhwIjoxNjY1Mzg0Mjc2fQ.0mKrjwIqfjgiL550kLttS3r13BWmQyXnbUtEBxXHLdA
+
+### LabKes
+GET http://127.0.0.1:4001/api/labkes?provinsiId=12&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4NjU2MCwiZXhwIjoxNjY1Mzg3MTYwfQ.fVP0u2x8BjBcMDH0S3w42wk7jT8SDuKH2NxWr4v2r3A
+
+### LabKes Specific
+GET http://127.0.0.1:4001/api/labkes/1610111
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4NjU2MCwiZXhwIjoxNjY1Mzg3MTYwfQ.fVP0u2x8BjBcMDH0S3w42wk7jT8SDuKH2NxWr4v2r3A
