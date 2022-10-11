@@ -27,7 +27,7 @@ class Klinik {
 
         const sqlOrder = ' ORDER BY dbfaskes.data_klinik.id_prov,' +
             'dbfaskes.data_klinik.id_kota,' +
-            'dbfaskes.data_klinik.id_camat '
+            'dbfaskes.data_klinik.id_camat ' 
 
         const sqlLimit = 'LIMIT ? '
             
@@ -62,13 +62,17 @@ class Klinik {
         sqlFilterValue.push(startIndex)
 
         let sqlFilter = ''
-        filter.forEach((value, index) => {
-            if (index == 0) {
-                sqlFilter = sqlWhere.concat(value)
-            } else if (index > 0) {
-                sqlFilter = sqlFilter.concat(' and ').concat(value)
-            }
-        })
+        if (filter.length == 0) {
+            sqlFilter = 'WHERE dbfaskes.trans_final.kode_faskes IS NOT NULL'
+        } else {
+            filter.forEach((value, index) => {
+                if (index == 0) {
+                    sqlFilter = sqlWhere.concat(value)
+                } else if (index > 0) {
+                    sqlFilter = sqlFilter.concat(' and ').concat(value)
+                }
+            })
+        }
 
         const sql = sqlSelect.concat(sqlFrom).concat(sqlFilter).concat(sqlOrder).concat(sqlLimit).concat(sqlOffSet)
 
