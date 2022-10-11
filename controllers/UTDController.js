@@ -6,7 +6,7 @@ const Joi = require('joi')
 class UTDController {
     index(req, res) {
         const schema = Joi.object({
-            provinsiId: Joi.string().required(),
+            provinsiId: Joi.string().allow(''),
             kabKotaId: Joi.string().allow('').allow(null),
             nama: Joi.string().allow(''),
             page: Joi.number()

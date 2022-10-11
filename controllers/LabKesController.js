@@ -6,7 +6,7 @@ const Joi = require('joi')
 class LabKesController {
     index(req, res) {
         const schema = Joi.object({
-            provinsiId: Joi.string().required(),
+            provinsiId: Joi.string().allow(''),
             kabKotaId: Joi.string().allow('').allow(null),
             nama: Joi.string().allow(''),
             page: Joi.number()
