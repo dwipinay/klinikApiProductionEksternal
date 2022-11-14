@@ -11,12 +11,22 @@ class Klinik {
 
         const sqlSelect = 'SELECT dbfaskes.trans_final.kode_faskes as id, ' +
             'dbfaskes.data_klinik.nama_klinik as nama,' +
+            'dbfaskes.data_klinik.pemilik as pemilik,' +
+            'dbfaskes.data_klinik.nama_pemilik as namaPemilik,' +
+            'dbfaskes.data_klinik.nama_penanggung_jawab_klinik as namaPenanggungJawabKlinik,' +
+            'dbfaskes.data_klinik.jenis_modal_usaha as jenisModalUsaha, ' +
             'dbfaskes.data_klinik.jenis_klinik as jenisKlinik ,' +
             'dbfaskes.data_klinik.jenis_perawatan as jenisPerawatan,' +
             'dbfaskes.data_klinik.alamat_faskes as alamat,' +
             'dbfaskes.data_klinik.no_telp as noTelp,' +
-            'dbfaskes.propinsi.nama_prop as provinsi, ' +
-            'dbfaskes.kota.nama_kota as kabKota, ' +
+            'dbfaskes.data_klinik.email as email,' +
+            'dbfaskes.data_klinik.id_prov as provinsiId, ' +
+            'dbfaskes.propinsi.nama_prop as provinsiNama, ' +
+            'dbfaskes.data_klinik.id_kota as kabKotaiId, ' +
+            'dbfaskes.kota.nama_kota as kabKotaNama, ' +
+            'dbfaskes.data_klinik.id_camat as kecamatanId, ' +
+            'dbfaskes.data_klinik.nama_puskesmas as puskesmasPembina, ' +
+            'dbfaskes.data_klinik.persalinan as persalinan, ' +
             'dbfaskes.data_klinik.latitude,' +
             'dbfaskes.data_klinik.longitude '
 

@@ -9,31 +9,31 @@ Content-Type: application/json
 
 ### Klinik
 GET http://127.0.0.1:4001/api/klinik?provinsiId=&kabKotaId=&page=2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTQ1ODExNiwiZXhwIjoxNjY1NDU4NzE2fQ.nCrZ_CB1hKS12WX0jPz0U29FqYNHqoBuZA2Kb9EpkJw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTQ1ODcxMCwiZXhwIjoxNjY1NDU5MzEwfQ.ypYH9IvvDHX18bcldL8-_EnutQgk72cgMrNDhvKhquo
 
 ### Klinik Specific
 GET http://127.0.0.1:4001/api/klinik/1211178
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNTI0NiwiZXhwIjoxNjYzMjA1ODQ2fQ.an5d7bCRF8DWWWOBilLQNyudYED27GALNucO5_S8Nn8
 
 ### Praktek Mandiri
-http://127.0.0.1:4001/api/praktekmandiri?provinsiId=12&kabKotaId=&page=1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4MzY3NiwiZXhwIjoxNjY1Mzg0Mjc2fQ.0mKrjwIqfjgiL550kLttS3r13BWmQyXnbUtEBxXHLdA
+http://127.0.0.1:4001/api/praktekmandiri?provinsiId=&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTQ1ODcxMCwiZXhwIjoxNjY1NDU5MzEwfQ.ypYH9IvvDHX18bcldL8-_EnutQgk72cgMrNDhvKhquo
 
 ### Praktek Mandiri Specific
 http://127.0.0.1:4001/api/praktekmandiri/12020100001
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4MzY3NiwiZXhwIjoxNjY1Mzg0Mjc2fQ.0mKrjwIqfjgiL550kLttS3r13BWmQyXnbUtEBxXHLdA
 
 ### LabKes
-GET http://127.0.0.1:4001/api/labkes?provinsiId=12&kabKotaId=&page=1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4NjU2MCwiZXhwIjoxNjY1Mzg3MTYwfQ.fVP0u2x8BjBcMDH0S3w42wk7jT8SDuKH2NxWr4v2r3A
+GET http://127.0.0.1:4001/api/labkes?provinsiId=&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTQ1ODcxMCwiZXhwIjoxNjY1NDU5MzEwfQ.ypYH9IvvDHX18bcldL8-_EnutQgk72cgMrNDhvKhquo
 
 ### LabKes Specific
 GET http://127.0.0.1:4001/api/labkes/1610111
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4ODE2NywiZXhwIjoxNjY1Mzg4NzY3fQ.V9IoetXSxvDY6KWapviVZ0lvAevaiiTwBsRe3taj11U
 
 ### UTD
-GET http://127.0.0.1:4001/api/utd?provinsiId=12&kabKotaId=&page=1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTM4ODE2NywiZXhwIjoxNjY1Mzg4NzY3fQ.V9IoetXSxvDY6KWapviVZ0lvAevaiiTwBsRe3taj11U
+GET http://127.0.0.1:4001/api/utd?provinsiId=&kabKotaId=&page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2NTQ1ODcxMCwiZXhwIjoxNjY1NDU5MzEwfQ.ypYH9IvvDHX18bcldL8-_EnutQgk72cgMrNDhvKhquo
 
 ### UTD Specific
 GET http://127.0.0.1:4001/api/utd/1510015

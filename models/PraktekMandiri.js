@@ -12,10 +12,22 @@ class PraktekMandiri {
         const sqlSelect = 'SELECT ' +
             'dbfaskes.trans_final.kode_faskes as id, ' +
             'dbfaskes.data_pm.nama_pm as nama, ' +
+            'dbfaskes.data_pm.no_sip as noSIP, ' +
+            'dbfaskes.data_pm.tgl_berakhir_sip as tanggalBerakhirSIP, ' +
+            'dbfaskes.data_pm.kepemilikan_tempat as kepemilikanTempat, ' +
+            'dbfaskes.data_pm.no_str as noSTR, ' +
+            'dbfaskes.data_pm.tgl_berakhir_str as tanggalBerakhirSTR, ' +
             'dbfaskes.data_pm.alamat_faskes as alamat, ' +
             'dbfaskes.data_pm.no_telp as noTelp, ' +
-            'dbfaskes.propinsi.nama_prop as provinsi, ' +
-            'dbfaskes.kota.nama_kota as kabKota, ' +
+            'dbfaskes.data_pm.email as email, ' +
+            'dbfaskes.data_pm.id_prov_pm as provinsiId, ' +
+            'dbfaskes.propinsi.nama_prop as provinsiNama, ' +
+            'dbfaskes.data_pm.id_kota_pm as kabKotaId, ' +
+            'dbfaskes.kota.nama_kota as kabKotaNama, ' +
+            'dbfaskes.data_pm.id_camat_pm as kecamatanId, ' +
+            'dbfaskes.data_pm.puskesmas_pembina as puskesmasPembina, ' +
+            'dbfaskes.data_pm.kerja_sama_bpjs_kesehatan as kerjaSamaBPJSKesehatan, ' +
+            'dbfaskes.data_pm.berjejaring_fktp as berjejaringFKTP, ' +
             'dbfaskes.data_pm.latitude, ' +
             'dbfaskes.data_pm.longitude '
 
