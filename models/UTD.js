@@ -13,11 +13,22 @@ class UTD {
             'dbfaskes.trans_final.kode_faskes as id, ' +
             'dbfaskes.data_utd.nama_utd as nama, ' +
             'dbfaskes.data_utd.alamat_faskes as alamat, ' +
+            'dbfaskes.data_utd.status_kepemilikan as statusKepemilikan, ' +
+            'dbfaskes.data_utd.nama_instansi as namaInstansi, ' +
+            'dbfaskes.data_utd.nama_rs as namaRS, ' +
+            'dbfaskes.data_utd.jenis_utd as jenisUTD, ' +
+            'dbfaskes.data_utd.nama_kepala_utd as namaKepalaUTD, ' +
             'dbfaskes.data_utd.no_telp as noTelp, ' +
-            'dbfaskes.propinsi.nama_prop as provinsi, ' +
-            'dbfaskes.kota.nama_kota as kabKota, ' +
+            'dbfaskes.data_utd.id_prov as provinsiId, ' +
+            'dbfaskes.propinsi.nama_prop as provinsiNama, ' +
+            'dbfaskes.data_utd.id_kota as kabKotaId, ' +
+            'dbfaskes.kota.nama_kota as kabKotaNama, ' +
+            'dbfaskes.data_utd.id_camat as kecamatanId, ' +
+            'dbfaskes.data_utd.email as email, ' +
             'dbfaskes.data_utd.latitude, ' +
-            'dbfaskes.data_utd.longitude '
+            'dbfaskes.data_utd.longitude, ' +
+            'dbfaskes.data_utd.akreditasi_utd as akreditasiUTD, ' +
+            'dbfaskes.data_utd.status_utd as statusUTD '
 
         const sqlFrom = 'FROM ' +
             'dbfaskes.data_utd INNER JOIN dbfaskes.trans_final ON dbfaskes.trans_final.id_faskes = dbfaskes.data_utd.id_faskes ' +
