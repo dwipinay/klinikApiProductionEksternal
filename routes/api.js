@@ -7,7 +7,7 @@ const klinikController = require('../controllers/KlinikController')
 const praktekMandiriController = require('../controllers/PraktekMandiriController')
 const labKesController = require('../controllers/LabKesController')
 const utdController = require('../controllers/UTDController')
-
+const rumahSakitController = require('../controllers/RumahSakitController')
 
 // Instance Class
 const tokenObject = new token()
@@ -16,6 +16,7 @@ const klinikControllerObject = new klinikController()
 const praktekMandiriControllerObject = new praktekMandiriController()
 const labKesControllerObject = new labKesController()
 const utdControllerObject = new utdController()
+const rumahSakitControllerObject = new rumahSakitController()
 
 // Auth
 router.post('/api/login',
@@ -65,6 +66,12 @@ router.get('/api/utd/:id',
     userControllerObject.authenticateIP,
     tokenObject.authenticateToken,
     utdControllerObject.show)
+
+// Rumah Sakit
+router.get('/api/rumahsakit',
+    userControllerObject.authenticateIP,
+    tokenObject.authenticateToken,
+    rumahSakitControllerObject.index)
 
 router.use('/api', (req, res) => {
     res.status(404).send({
