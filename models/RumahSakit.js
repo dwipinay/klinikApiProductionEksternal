@@ -16,7 +16,8 @@ class RumahSakit {
             'reference.kab_kota.nama as kabKotaNama, ' +
             'db_fasyankes.m_jenis.alias AS jenis, ' +
             'db_fasyankes.m_kelas.kelas AS kelas, ' +
-            'db_fasyankes.m_kepemilikan.kepemilikan AS kepemilikan '
+            'db_fasyankes.m_kepemilikan.kepemilikan AS kepemilikan, ' +
+            'db_fasyankes.t_dok_tariflayanan_rs.url as urlTarif '
 
         const sqlFrom = 'FROM db_fasyankes.`data` INNER JOIN reference.provinsi ' +
         'ON reference.provinsi.id = db_fasyankes.`data`.provinsi_id ' +
@@ -28,7 +29,8 @@ class RumahSakit {
         'ON db_fasyankes.m_kelas.id_kelas = db_fasyankes.`data`.KLS_RS ' +
         'INNER JOIN db_fasyankes.m_kepemilikan ' +
         'ON db_fasyankes.m_kepemilikan.id_kepemilikan = db_fasyankes.`data`.PENYELENGGARA ' +
-        'INNER JOIN db_fasyankes.m_blu ON db_fasyankes.m_blu.id_blu = db_fasyankes.`data`.blu  '
+        'INNER JOIN db_fasyankes.m_blu ON db_fasyankes.m_blu.id_blu = db_fasyankes.`data`.blu  ' +
+        'LEFT OUTER JOIN db_fasyankes.t_dok_tariflayanan_rs on db_fasyankes.t_dok_tariflayanan_rs.koders = db_fasyankes.`data`.Propinsi '
 
         const sqlOrder = ' ORDER BY db_fasyankes.`data`.RUMAH_SAKIT ' 
 
