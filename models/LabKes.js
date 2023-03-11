@@ -54,6 +54,7 @@ class LabKes {
 
         const provinsiId = req.query.provinsiId || null
         const kabKotaId = req.query.kabKotaId || null
+        const nama = req.query.nama || null
 
         if (provinsiId != null) {
             filter.push("dbfaskes.data_labkes.id_prov = ?")
@@ -63,6 +64,11 @@ class LabKes {
         if (kabKotaId != null) {
             filter.push("dbfaskes.data_labkes.id_kota = ?")
             sqlFilterValue.push(kabKotaId)
+        }
+
+        if (nama != null) {
+            filter.push("dbfaskes.data_labkes.nama_lab like ?")
+            sqlFilterValue.push('%'.concat(nama).concat('%'))
         }
 
         sqlFilterValue.push(endIndex)

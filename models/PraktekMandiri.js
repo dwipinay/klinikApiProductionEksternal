@@ -50,6 +50,7 @@ class PraktekMandiri {
 
         const provinsiId = req.query.provinsiId || null
         const kabKotaId = req.query.kabKotaId || null
+        const nama = req.query.nama || null
 
         if (provinsiId != null) {
             filter.push("dbfaskes.data_pm.id_prov_pm = ?")
@@ -59,6 +60,11 @@ class PraktekMandiri {
         if (kabKotaId != null) {
             filter.push("dbfaskes.data_pm.id_kota_pm = ?")
             sqlFilterValue.push(kabKotaId)
+        }
+
+        if (nama != null) {
+            filter.push("dbfaskes.data_pm.nama_pm like ?")
+            sqlFilterValue.push('%'.concat(nama).concat('%'))
         }
 
         sqlFilterValue.push(endIndex)

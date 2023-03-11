@@ -8,6 +8,7 @@ class RumahSakitController {
         const schema = Joi.object({
             provinsiId: Joi.string().allow(''),
             kabKotaId: Joi.string().allow('').allow(null),
+            nama: Joi.string(),
             page: Joi.number()
         })
 
@@ -44,27 +45,27 @@ class RumahSakitController {
         })
     }
 
-    // show(req, res) {
-    //     const klinikObject = new klinik()
-    //     klinikObject.show(req.params.id, req, (err, results) => {
-    //         if (err) {
-    //             res.status(422).send({
-    //                 status: false,
-    //                 message: err
-    //             })
-    //             return
-    //         }
+    show(req, res) {
+        const rumahSakitObject = new rumahSakit()
+        rumahSakitObject.show(req.params.id, req, (err, results) => {
+            if (err) {
+                res.status(422).send({
+                    status: false,
+                    message: err
+                })
+                return
+            }
 
-    //         const message = results.length ? 'data found' : 'data not found'
-    //         const data = results.length ? results[0] : null
+            const message = results.length ? 'data found' : 'data not found'
+            const data = results.length ? results[0] : null
 
-    //         res.status(200).send({
-    //             status: true,
-    //             message: message,
-    //             data: data
-    //         })
-    //     })
-    // }
+            res.status(200).send({
+                status: true,
+                message: message,
+                data: data
+            })
+        })
+    }
 }
 
 module.exports = RumahSakitController

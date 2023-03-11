@@ -73,6 +73,12 @@ router.get('/api/rumahsakit',
     tokenObject.authenticateToken,
     rumahSakitControllerObject.index)
 
+router.get('/api/rumahsakit/:id',
+    userControllerObject.authenticateIP,
+    tokenObject.authenticateToken,
+    rumahSakitControllerObject.show)
+
+
 router.use('/api', (req, res) => {
     res.status(404).send({
         status: false,

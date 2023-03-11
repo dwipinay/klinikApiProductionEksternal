@@ -49,6 +49,7 @@ class UTD {
 
         const provinsiId = req.query.provinsiId || null
         const kabKotaId = req.query.kabKotaId || null
+        const nama = req.query.nama || null
 
         if (provinsiId != null) {
             filter.push("dbfaskes.data_utd.id_prov = ?")
@@ -58,6 +59,11 @@ class UTD {
         if (kabKotaId != null) {
             filter.push("dbfaskes.data_utd.id_kota = ?")
             sqlFilterValue.push(kabKotaId)
+        }
+
+        if (nama != null) {
+            filter.push("dbfaskes.data_utd.nama_utd like ?")
+            sqlFilterValue.push('%'.concat(nama).concat('%'))
         }
 
         sqlFilterValue.push(endIndex)
