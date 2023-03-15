@@ -22,7 +22,7 @@ class Klinik {
             'dbfaskes.data_klinik.email as email,' +
             'dbfaskes.data_klinik.id_prov as provinsiId, ' +
             'dbfaskes.propinsi.nama_prop as provinsiNama, ' +
-            'dbfaskes.data_klinik.id_kota as kabKotaiId, ' +
+            'dbfaskes.data_klinik.id_kota as kabKotaId, ' +
             'dbfaskes.kota.nama_kota as kabKotaNama, ' +
             'dbfaskes.data_klinik.id_camat as kecamatanId, ' +
             'dbfaskes.data_klinik.nama_puskesmas as puskesmasPembina, ' +
