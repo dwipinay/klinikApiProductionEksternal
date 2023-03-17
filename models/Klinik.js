@@ -10,6 +10,7 @@ class Klinik {
         const endIndex = limit
 
         const sqlSelect = 'SELECT dbfaskes.trans_final.kode_faskes as id, ' +
+            'dbfaskes.trans_final.kode_faskes_baru as idBaru, ' +
             'dbfaskes.data_klinik.nama_klinik as nama,' +
             'dbfaskes.data_klinik.pemilik as pemilik,' +
             'dbfaskes.data_klinik.nama_pemilik as namaPemilik,' +

@@ -11,6 +11,7 @@ class LabKes {
 
         const sqlSelect = 'SELECT ' +
             'dbfaskes.trans_final.kode_faskes as id, ' +
+            'dbfaskes.trans_final.kode_faskes_baru as idBaru, ' +
             'dbfaskes.data_labkes.nama_lab as nama, ' +
             'dbfaskes.data_labkes.jenis_pelayanan as jenisPelayanan, ' +
             'dbfaskes.data_labkes.jenis_lab as jenisLab, ' +

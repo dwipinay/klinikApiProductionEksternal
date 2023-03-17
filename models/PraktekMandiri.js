@@ -11,6 +11,7 @@ class PraktekMandiri {
 
         const sqlSelect = 'SELECT ' +
             'dbfaskes.trans_final.kode_faskes as id, ' +
+            'dbfaskes.trans_final.kode_faskes_baru as idBaru, ' +
             'dbfaskes.data_pm.nama_pm as nama, ' +
             'dbfaskes.data_pm.no_sip as noSIP, ' +
             'dbfaskes.data_pm.tgl_berakhir_sip as tanggalBerakhirSIP, ' +

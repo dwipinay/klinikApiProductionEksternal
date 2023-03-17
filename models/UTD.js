@@ -11,6 +11,7 @@ class UTD {
 
         const sqlSelect = 'SELECT ' +
             'dbfaskes.trans_final.kode_faskes as id, ' +
+            'dbfaskes.trans_final.kode_faskes_baru as idBaru, ' +
             'dbfaskes.data_utd.nama_utd as nama, ' +
             'dbfaskes.data_utd.alamat_faskes as alamat, ' +
             'dbfaskes.data_utd.status_kepemilikan as statusKepemilikan, ' +
