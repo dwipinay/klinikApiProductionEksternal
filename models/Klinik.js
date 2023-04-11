@@ -29,7 +29,9 @@ class Klinik {
             'dbfaskes.data_klinik.nama_puskesmas as puskesmasPembina, ' +
             'dbfaskes.data_klinik.persalinan as persalinan, ' +
             'dbfaskes.data_klinik.latitude,' +
-            'dbfaskes.data_klinik.longitude '
+            'dbfaskes.data_klinik.longitude, ' +
+            'dbfaskes.data_klinik.created_at, ' +
+            'dbfaskes.data_klinik.modified_at '
 
         const sqlFrom = 'FROM dbfaskes.data_klinik ' +
             'INNER JOIN dbfaskes.trans_final ON dbfaskes.trans_final.id_faskes = dbfaskes.data_klinik.id_faskes ' +
@@ -123,21 +125,34 @@ class Klinik {
     show(id, req, callback) {
         const database = new Database(pool)
         const sql = 'SELECT dbfaskes.trans_final.kode_faskes as faskesId,' +
+            'dbfaskes.trans_final.kode_faskes_baru as idBaru, ' +
             'dbfaskes.data_klinik.nama_klinik as nama,' +
-            'dbfaskes.data_klinik.jenis_klinik as jenisKlinik,' +
+            'dbfaskes.data_klinik.pemilik as pemilik,' +
+            'dbfaskes.data_klinik.nama_pemilik as namaPemilik,' +
+            'dbfaskes.data_klinik.nama_penanggung_jawab_klinik as namaPenanggungJawabKlinik,' +
+            'dbfaskes.data_klinik.jenis_modal_usaha as jenisModalUsaha, ' +
+            'dbfaskes.data_klinik.jenis_klinik as jenisKlinik ,' +
             'dbfaskes.data_klinik.jenis_perawatan as jenisPerawatan,' +
             'dbfaskes.data_klinik.alamat_faskes as alamat,' +
-            'dbfaskes.propinsi.nama_prop as propinsiNama,' +
-            'dbfaskes.kota.nama_kota as kotaNama,' +
             'dbfaskes.data_klinik.no_telp as noTelp,' +
+            'dbfaskes.data_klinik.email as email,' +
+            'dbfaskes.data_klinik.id_prov as provinsiId, ' +
+            'dbfaskes.propinsi.nama_prop as provinsiNama, ' +
+            'dbfaskes.data_klinik.id_kota as kabKotaId, ' +
+            'dbfaskes.kota.nama_kota as kabKotaNama, ' +
+            'dbfaskes.data_klinik.id_camat as kecamatanId, ' +
+            'dbfaskes.data_klinik.nama_puskesmas as puskesmasPembina, ' +
+            'dbfaskes.data_klinik.persalinan as persalinan, ' +
             'dbfaskes.data_klinik.latitude,' +
-            'dbfaskes.data_klinik.longitude ' +
+            'dbfaskes.data_klinik.longitude, ' +
+            'dbfaskes.data_klinik.created_at, ' +
+            'dbfaskes.data_klinik.modified_at ' +
         'FROM ' +
             'dbfaskes.data_klinik ' +
             'INNER JOIN dbfaskes.trans_final ON dbfaskes.trans_final.id_faskes = dbfaskes.data_klinik.id_faskes ' +
             'INNER JOIN dbfaskes.propinsi ON dbfaskes.propinsi.id_prop = dbfaskes.data_klinik.id_prov ' +
             'INNER JOIN dbfaskes.kota ON dbfaskes.kota.id_kota = dbfaskes.data_klinik.id_kota ' +
-        'WHERE dbfaskes.trans_final.kode_faskes = ?'
+        'WHERE dbfaskes.trans_final.kode_faskes_baru = ?'
 
         const sqlFilterValue = [id]
         database.query(sql, sqlFilterValue)

@@ -29,8 +29,9 @@ class PraktekMandiri {
             'dbfaskes.data_pm.puskesmas_pembina as puskesmasPembina, ' +
             'dbfaskes.data_pm.kerja_sama_bpjs_kesehatan as kerjaSamaBPJSKesehatan, ' +
             'dbfaskes.data_pm.berjejaring_fktp as berjejaringFKTP, ' +
-            'dbfaskes.data_pm.latitude, ' +
-            'dbfaskes.data_pm.longitude '
+            'dbfaskes.data_pm.longitude, ' +
+            'dbfaskes.data_pm.created_at, ' +
+            'dbfaskes.data_pm.modified_at '
 
         const sqlFrom = 'FROM ' +
             'dbfaskes.data_pm INNER JOIN dbfaskes.trans_final ON dbfaskes.trans_final.id_faskes = dbfaskes.data_pm.id_faskes ' +
@@ -123,19 +124,34 @@ class PraktekMandiri {
         const database = new Database(pool)
         const sql = 'SELECT ' +
             'dbfaskes.trans_final.kode_faskes as id, ' +
+            'dbfaskes.trans_final.kode_faskes_baru as idBaru, ' +
             'dbfaskes.data_pm.nama_pm as nama, ' +
+            'dbfaskes.data_pm.no_sip as noSIP, ' +
+            'dbfaskes.data_pm.tgl_berakhir_sip as tanggalBerakhirSIP, ' +
+            'dbfaskes.data_pm.kepemilikan_tempat as kepemilikanTempat, ' +
+            'dbfaskes.data_pm.no_str as noSTR, ' +
+            'dbfaskes.data_pm.tgl_berakhir_str as tanggalBerakhirSTR, ' +
             'dbfaskes.data_pm.alamat_faskes as alamat, ' +
             'dbfaskes.data_pm.no_telp as noTelp, ' +
-            'dbfaskes.propinsi.nama_prop as provinsi,' +
-            'dbfaskes.kota.nama_kota as kabKota,' +
-            'dbfaskes.data_pm.latitude,' +
-            'dbfaskes.data_pm.longitude ' +
+            'dbfaskes.data_pm.email as email, ' +
+            'dbfaskes.data_pm.id_prov_pm as provinsiId, ' +
+            'dbfaskes.propinsi.nama_prop as provinsiNama, ' +
+            'dbfaskes.data_pm.id_kota_pm as kabKotaId, ' +
+            'dbfaskes.kota.nama_kota as kabKotaNama, ' +
+            'dbfaskes.data_pm.id_camat_pm as kecamatanId, ' +
+            'dbfaskes.data_pm.puskesmas_pembina as puskesmasPembina, ' +
+            'dbfaskes.data_pm.kerja_sama_bpjs_kesehatan as kerjaSamaBPJSKesehatan, ' +
+            'dbfaskes.data_pm.berjejaring_fktp as berjejaringFKTP, ' +
+            'dbfaskes.data_pm.latitude, ' +
+            'dbfaskes.data_pm.longitude, ' +
+            'dbfaskes.data_pm.created_at, ' +
+            'dbfaskes.data_pm.modified_at ' +
         'FROM ' +
             'dbfaskes.data_pm INNER JOIN dbfaskes.trans_final ON dbfaskes.trans_final.id_faskes = dbfaskes.data_pm.id_faskes ' +
             'INNER JOIN dbfaskes.propinsi ON dbfaskes.propinsi.id_prop = dbfaskes.data_pm.id_prov_pm ' +
             'INNER JOIN dbfaskes.kota ON dbfaskes.kota.id_kota = dbfaskes.data_pm.id_kota_pm ' +
             'INNER JOIN dbfaskes.kategori_pm ON dbfaskes.kategori_pm.id =  dbfaskes.data_pm.id_kategori ' +
-        'WHERE dbfaskes.trans_final.kode_faskes = ?'
+        'WHERE dbfaskes.trans_final.kode_faskes_baru = ?'
 
         const sqlFilterValue = [id]
         database.query(sql, sqlFilterValue)

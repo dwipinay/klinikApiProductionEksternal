@@ -8,23 +8,23 @@ Content-Type: application/json
 }
 
 ### Rumah Sakit
-GET http://127.0.0.1:4001/api/rumahsakit?nama=dharmais
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY3ODU3NjIwNywiZXhwIjoxNjc4NTc2ODA3fQ.4PxoeADhF1HocavkAskAPoP-9J9UfC9YoZ3MvbOUoSg
+GET http://127.0.0.1:4001/api/rumahsakit?nama=jantung
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY4MTEzNTAzMSwiZXhwIjoxNjgxMTM1NjMxfQ.e26RBBGmkPuRoU45X_0NyakNsLs0DYx-tJD5cAZpyn4
 
 ### Klinik
-GET http://127.0.0.1:4001/api/klinik
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY3OTA1OTU1NSwiZXhwIjoxNjc5MDYwMTU1fQ.ds_ST42yAQiBM0k7h59eNK3G73UNjS_bXnxbti7zWJA
+GET http://127.0.0.1:4001/api/klinik/11010300009
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY4MTE5NTQ2OSwiZXhwIjoxNjgxMTk2MDY5fQ.bA8gBF37ahelcFzIaXyzug35curMtR69r5r57q10Wl4
 
 ### Klinik Specific
 GET http://127.0.0.1:4001/api/klinik/1211178
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNTI0NiwiZXhwIjoxNjYzMjA1ODQ2fQ.an5d7bCRF8DWWWOBilLQNyudYED27GALNucO5_S8Nn8
 
 ### Praktek Mandiri
-http://127.0.0.1:4001/api/praktekmandiri?nama=rezifa
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY3OTA1OTM4OCwiZXhwIjoxNjc5MDU5OTg4fQ.BI96kU-XN2LN2VpAoZQVvCmliSjXracGdkEWtPsxdvg
+http://127.0.0.1:4001/api/praktekmandiri
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY4MTE5NDgzOCwiZXhwIjoxNjgxMTk1NDM4fQ.mFhdVR-6sMJG7PPvLfokhax0VyRoI_IbYIlapf8dcSQ
 
 ### Praktek Mandiri Specific
-http://127.0.0.1:4001/api/praktekmandiri/12020100001
+http://127.0.0.1:4001/api/praktekmandiri
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY3ODU3NTM3OCwiZXhwIjoxNjc4NTc1OTc4fQ.GpSO3O90sb6eDQte9ZkELX-tupFo3QASjB6MS_7wm8M
 
 ### LabKes
