@@ -147,7 +147,7 @@ class UTD {
             'dbfaskes.data_utd INNER JOIN dbfaskes.trans_final ON dbfaskes.trans_final.id_faskes = dbfaskes.data_utd.id_faskes ' +
             'INNER JOIN dbfaskes.propinsi ON dbfaskes.propinsi.id_prop = dbfaskes.data_utd.id_prov ' +
             'INNER JOIN dbfaskes.kota ON dbfaskes.kota.id_kota = dbfaskes.data_utd.id_kota ' +
-        'WHERE dbfaskes.trans_final.kode_faskes = ?'
+        'WHERE dbfaskes.trans_final.kode_faskes_baru = ?'
 
         const sqlFilterValue = [id]
         database.query(sql, sqlFilterValue)

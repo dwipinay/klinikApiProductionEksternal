@@ -1,10 +1,10 @@
 ### Token Create
-POST http://127.0.0.1:4001/api/login
+POST http://localhost:4001/api/login
 Content-Type: application/json
 
 {
     "userName": "kotakelektronik@gmail.com",
-    "password": "p5fuNGds"
+    "password": "p5fuNGDS"
 }
 
 ### Rumah Sakit
@@ -20,8 +20,8 @@ GET http://127.0.0.1:4001/api/klinik/1211178
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY2MzIwNTI0NiwiZXhwIjoxNjYzMjA1ODQ2fQ.an5d7bCRF8DWWWOBilLQNyudYED27GALNucO5_S8Nn8
 
 ### Praktek Mandiri
-http://127.0.0.1:4001/api/praktekmandiri
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY4MTE5NDgzOCwiZXhwIjoxNjgxMTk1NDM4fQ.mFhdVR-6sMJG7PPvLfokhax0VyRoI_IbYIlapf8dcSQ
+http://localhost:4001/api/praktekmandiri
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInVzZXJfbmFtZSI6ImR0b3NhdHVzZWhhdEBrZW1rZXMuZ28uaWQiLCJpYXQiOjE2ODE0MzY2MzksImV4cCI6MTY4MTQzNzIzOX0.OuvGsRecSGo1Ac4GSFJZAIyXjTO5lXo5OMM1UiEnJA0
 
 ### Praktek Mandiri Specific
 http://127.0.0.1:4001/api/praktekmandiri
@@ -42,3 +42,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uY
 ### UTD Specific
 GET http://127.0.0.1:4001/api/utd/1510015
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoia290YWtlbGVrdHJvbmlrQGdtYWlsLmNvbSIsImlhdCI6MTY3ODU3NTk4NCwiZXhwIjoxNjc4NTc2NTg0fQ.Lck10VADzA6Iuw8YWMvVNtsuY6_xzm7KAhfgl4O8pvU
+
+### Login
+POST http://202.70.136.86/reviewtpmd/v1/login 
+Content-Type: application/json
+
+{
+    "email": "dtosatusehat@kemkes.go.id",
+    "password": "DTOs4TS3t!!!"
+}
+
+
+
+###
+GET http://202.70.136.86/reviewtpmd/v1/nakes/31740100001
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtYSI6ImFsZWsiLCJlbWFpbCI6ImR0b3NhdHVzZWhhdEBrZW1rZXMuZ28uaWQiLCJpYXQiOjE2ODE0Mzc3NjQsImV4cCI6MTY4MTQzODY2NH0.8beCDPMTcLZyoT4I1bG826Gdgg32O7zjBJLyP5KNUAg

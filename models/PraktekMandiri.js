@@ -29,6 +29,7 @@ class PraktekMandiri {
             'dbfaskes.data_pm.puskesmas_pembina as puskesmasPembina, ' +
             'dbfaskes.data_pm.kerja_sama_bpjs_kesehatan as kerjaSamaBPJSKesehatan, ' +
             'dbfaskes.data_pm.berjejaring_fktp as berjejaringFKTP, ' +
+            'dbfaskes.data_pm.latitude, ' +
             'dbfaskes.data_pm.longitude, ' +
             'dbfaskes.data_pm.created_at, ' +
             'dbfaskes.data_pm.modified_at '
